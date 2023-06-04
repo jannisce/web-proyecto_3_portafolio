@@ -1,8 +1,7 @@
-import React from 'react';
-import styles from './Navbar.module.css';
+import React from 'react'
+import styles from './NavBar.module.css'
 
-const NavBar = ({ selectedSection, setSelectedSection }) => {
-
+function NavBar({ selectedSection, setSelectedSection }) {
   return (
     <div className={styles.contenedor}>
       <div className={styles.info}>
@@ -15,11 +14,13 @@ const NavBar = ({ selectedSection, setSelectedSection }) => {
             <div className={`${styles[`dot--${selectedSection.home === 'true' ? 'active' : 'inactive'}`]}`}>
               ●
             </div>
-            <a 
-              href="#home" 
+            <a
+              href="#home"
               className={`${styles.navbarLink} ${styles[`navbarLink--${selectedSection.home === 'true' ? 'active' : 'inactive'}`]}`}
-              onClick={() => setSelectedSection({ home: 'true', expertise: 'false', projects: 'false', contact: 'false' })}
-              >
+              onClick={() => setSelectedSection({
+                home: 'true', expertise: 'false', projects: 'false', contact: 'false',
+              })}
+            >
               {/* <span className={styles.hashtag}>#</span> home */}
               Home
             </a>
@@ -28,11 +29,13 @@ const NavBar = ({ selectedSection, setSelectedSection }) => {
             <div className={`${styles[`dot--${selectedSection.expertise === 'true' ? 'active' : 'inactive'}`]}`}>
               ●
             </div>
-            <a 
-              href="#expertise" 
+            <a
+              href="#expertise"
               className={`${styles.navbarLink} ${styles[`navbarLink--${selectedSection.expertise === 'true' ? 'active' : 'inactive'}`]}`}
-              onClick={() => setSelectedSection({ home: 'false', expertise: 'true', projects: 'false', contact: 'false' })}
-              >
+              onClick={() => setSelectedSection({
+                home: 'false', expertise: 'true', projects: 'false', contact: 'false',
+              })}
+            >
               {/* <span className={styles.hashtag}>#</span> expertise ■ */}
               Expertise
             </a>
@@ -41,11 +44,13 @@ const NavBar = ({ selectedSection, setSelectedSection }) => {
             <div className={`${styles[`dot--${selectedSection.projects === 'true' ? 'active' : 'inactive'}`]}`}>
               ●
             </div>
-            <a 
-              href="#projects" 
+            <a
+              href="#projects"
               className={`${styles.navbarLink} ${styles[`navbarLink--${selectedSection.projects === 'true' ? 'active' : 'inactive'}`]}`}
-              onClick={() => setSelectedSection({ home: 'false', expertise: 'false', projects: 'true', contact: 'false' })}
-              >
+              onClick={() => setSelectedSection({
+                home: 'false', expertise: 'false', projects: 'true', contact: 'false',
+              })}
+            >
               {/* <span className={styles.hashtag}>#</span> projects */}
               Projects
             </a>
@@ -54,11 +59,13 @@ const NavBar = ({ selectedSection, setSelectedSection }) => {
             <div className={`${styles[`dot--${selectedSection.contact === 'true' ? 'active' : 'inactive'}`]}`}>
               ●
             </div>
-            <a 
-              href="#contact" 
+            <a
+              href="#contact"
               className={`${styles.navbarLink} ${styles[`navbarLink--${selectedSection.contact === 'true' ? 'active' : 'inactive'}`]}`}
-              onClick={() => setSelectedSection({ home: 'false', expertise: 'false', projects: 'false', contact: 'true' })}
-              >
+              onClick={() => setSelectedSection({
+                home: 'false', expertise: 'false', projects: 'false', contact: 'true',
+              })}
+            >
               {/* <span className={styles.hashtag}>#</span> Contact */}
               Contact
             </a>
